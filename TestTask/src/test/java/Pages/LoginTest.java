@@ -20,13 +20,13 @@ public class LoginTest {
 
     @BeforeEach
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver")); // Укажите путь к ChromeDriver
+        System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Явное ожидание 10 секунд
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
     }
 
-    // Очистка после теста
+    
     @AfterEach
     public void tearDown() {
         if (driver != null) {
